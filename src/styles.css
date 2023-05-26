@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+#d{
+    transition: .5s ease-in-out;
+}
+
+#d:hover{
+    transform: scale(1.05);
+}
+
+/* and we can give this id in any in login page div or register page div */

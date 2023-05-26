@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center mt-4">Create New Account</h1>
+    <div id="d" class="container w-25 bg-light p-3 mt-5 border text-center">
+        <form action="">
+            <input id="u1" placeholder="username" type="text" class="form-control mt-2 p-2">
+            <input id="a1" placeholder="enter acno" type="text" class="form-control mt-2 p-2">
+            <input id="p1" placeholder="set a password" type="password" class="form-control mt-2 p-2">
+            <input id="cp1" placeholder="confirm password" type="password" class="form-control mt-2 p-2">
+
+
+            <button type="submit" onclick="register()" class="btn btn-success w-100 mt-4">create</button>
+
+            <!-- <a style="text-decoration: none;" class="fs-4" href="">create account</a> -->
+        </form>
+    </div>
+</body>
+<script>
+
+    function register(){
+      acno=a1.value
+      if(acno in localStorage){
+          alert("user already present")
+          window.location='index.html'
+      }
+      else{
+          pass1=p1.value
+          pass2=cp1.value
+          if(pass1==pass2){
+              user={acno,uname:u1.value,psw:pass1}
+              localStorage.setItem(acno,JSON.stringify(user))
+              window.location='index.html'
+              alert("account created")
+  
+              // alert is like return,when alert worked then the whole code will stop.
+              
+          }
+          else{
+              alert("password doesnt match")
+          }
+      }
+  }
+  
+  function login(){
+      acnum=a2.value
+      pass=p2.value
+      if(acnum in localStorage){
+          userr=JSON.parse(localStorage.getItem(acnum))
+          if(pass==userr.psw){
+              // redirect
+              alert("login success")
+          }
+          else{
+              alert("incorrect password")
+          }
+  
+      }
+      else{
+          window.location='register.html'
+          alert("not registered user")
+      }   
+  }
+  </script>
+</html>

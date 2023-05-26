@@ -1,0 +1,49 @@
+next is friday -  26/05/23
+
+(we are studying about how redirection through buttons,we already studied redirection througn links.)
+
+Redirection In angular
+----------------------
+
+link - href/routerLink
+
+method - navigateByUrl() - used to redirect to other pages
+class  - Router
+module - AppRoutingModule
+
+
+
+package - folder - contain many no of files - collection of modules
+module  - files  - collection of classes                    (one file can contain many classes,so many files can contan many classes. so module contains collection of classes)
+class   - collection of methods
+
+(in angular onclick will become click.)
+
+Data Binding In Angular
+------------------------
+
+html - ts
+
+view - component
+
+1.one way data Binding
+
+    1.1 - component to view
+        1.1.1 - sting interpollation   {{}}
+        1.1.2 - property binding [propertyName]='value'
+
+    1.2 - view to component
+        1.2.1 - event binding  (eventName)='methodName()'       -click
+        1.2.2 - $event Binding (eventName)='methodName($event)' -change
+        1.2.3 - event binding with template rendering variable  
+                            (event)='method(templateRenderingVariable)'
+
+2.two way data binding
+
+
+
+
+life cycle blocks of Angular component
+_______________________________________
+
+constructor-->ngOnInit-->other methods

@@ -11,19 +11,21 @@
     <h1 class="text-center mt-4">Create New Account</h1>
     <div id="d" class="container w-25 bg-light p-3 mt-5 border text-center">
         <form action="">
-            <input id="u1" placeholder="username" type="text" class="form-control mt-2 p-2">
-            <input id="a1" placeholder="enter acno" type="text" class="form-control mt-2 p-2">
-            <input id="p1" placeholder="set a password" type="password" class="form-control mt-2 p-2">
-            <input id="cp1" placeholder="confirm password" type="password" class="form-control mt-2 p-2">
+            <input id="a1" name="acno" [(ngModel)]="acno"  placeholder="enter acno" type="text" class="form-control mt-2 p-2">
+            <input id="u1" name="user" [(ngModel)]="uname" placeholder="username" type="text" class="form-control mt-2 p-2">
+           
+            
+            <input id="p1" name="pass" [(ngModel)]="psw" placeholder="set a password" type="password" class="form-control mt-2 p-2">
+            <input id="cp1" name="confi" [(ngModel)]="cpsw" placeholder="confirm password" type="password" class="form-control mt-2 p-2">
 
 
-            <button type="submit" onclick="register()" class="btn btn-success w-100 mt-4">create</button>
+            <button type="submit" (click)="signup()" class="btn btn-success w-100 mt-4">create</button>
 
             <!-- <a style="text-decoration: none;" class="fs-4" href="">create account</a> -->
         </form>
     </div>
 </body>
-<script>
+<!-- <script>
 
     function register(){
       acno=a1.value
@@ -68,5 +70,5 @@
           alert("not registered user")
       }   
   }
-  </script>
+  </script> -->
 </html>

@@ -12,10 +12,12 @@
     <h1 class="text-center mt-4">Login Page</h1>
     <div id="d" class="container w-25 bg-light p-3 mt-5 border text-center">
         <form action="">
-            <input id="a2" [placeholder]="pdata" (change)="acnoChange($event)" type="text" class="form-control mt-2 p-2">
-            <input id="p2" #psw placeholder="enter password" type="password" class="form-control mt-2 p-2">
-            <button (click)="login(psw)" type="submit" class="btn btn-success w-100 mt-4">login</button>
-
+            <input id="acno" [(ngModel)]="acno" name="acno" [placeholder]="pdata" type="text" class="form-control mt-2 p-2">
+            <!-- (change)="acnoChange($event)"  -->
+            <input id="psw" [(ngModel)]="psw" name="psw" placeholder="enter password" type="password" class="form-control mt-2 p-2">
+            <!-- #psw -->
+            <button (click)="login()" type="submit" class="btn btn-success w-100 mt-4">login</button>
+                        <!-- login(psw) -->
             <a style="text-decoration: none;" routerLink="register" class="fs-4" href="register.html">create account</a>
         </form>
     </div>

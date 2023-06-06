@@ -40,10 +40,83 @@ view - component
 
 2.two way data binding
 
-
+    2.1- ngModel
+            -FormsModule -module
+(for doing two way data binding we have to first import the FormsModule)
 
 
 life cycle blocks of Angular component
 _______________________________________
 
 constructor-->ngOnInit-->other methods
+
+
+Dependency Injection
+--------------------
+
+used to access datas and methods of one class in another class(like inheritance)
+
+- inside constructor()
+- access specifier - private/public
+
+[private(members cannot be accessed(or viewed)from outside the class)]
+[public(members are accessible from outside the class)]
+
+
+        constructor(private/public reference:ClassName)
+
+
+
+profile view
+balance check
+money tranfer
+account statement
+delete account
+logout
+
+
+Angular Services
+-----------------
+
+a file used to keep datas and methods that can access by any components in that module
+
+(-to create a service)
+ng g s serviceName      (ng generate serv serviceName)
+
+
+--------------------------------------------------------
+
+after server we have reached angular again.
+
+Api 
+----
+
+HttpClientModule - Module
+HttpClient - class
+methods
+        get,put,post,patch,delete
+
+(we have to give HttpClientModule in imports)
+and we have to import it,no suggestion will be there,---import { HttpClientModule } from '@angular/common/http'
+
+
+
+Asynchronous in ts
+-------------------
+
+js - promise - then()
+             - catch()
+
+ts - observable - subscribe()
+                - catch()
+
+Form Creation In angular
+-------------------------
+
+1.template driven form      (pure html) validation will be tough in this method
+2.model driven form         (html and ts is used(a model will be created in ts file)) (in this there are many methods to easily do the validation of form)
+
+so next we want to change the template driven form to model driven form.
+so push this project to git
+
+
